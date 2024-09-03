@@ -1,14 +1,14 @@
-# Installation
+# Installation in production mode
 
+- Install docker desktop locally after cloning the repository
 - `docker build -t travel:latest .` --> From root folder
 - `docker compose up -d` --> From docker folder
-- check the http://localhost:5000
+- Check the http://localhost:5000
 
-# Make localhost beautiful
+# Create a new file in root folder called .env and copy and complete it with the .env.example file 
 
-Windows:
+# Installation in developement mode
 
-- open a cmd with admin.
-- go to C:\Windows\System32\drivers\etc.
-- notepad hosts.
-- add wanted host.
+- `npm install --force `
+- `npm run dev `
+- `npm run server `
