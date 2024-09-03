@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 93vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #dde6ed;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+.inner-shadow {
+  -webkit-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 1);
+}
+
+.card-body-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-content {
+  flex: 1;
+}
+.card-bg {
+  background-color: white;
+  border-radius: 15px;
+}
+
+/* Add custom styles to the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #212529;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #212529;
+}
+
+.button-favorite {
+  transition: transform 0.3s ease;
+}
+
+.button-favorite.clicked {
+  transform: scale(1.1);
+  animation: bounce 0.5s forwards;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon.clicked {
+  transform: rotate(20deg);
+  color: rgb(228, 67, 49);
+  animation: rotate 0.5s forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
